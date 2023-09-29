@@ -21,20 +21,8 @@ def aniadir_vuelos():
             bucle_hora = False
     
     destino = str(input("\nIntroduce el destino: "))
-    bucle_destino = True
-    while bucle_destino:
-        if not destino.isalpha():
-            print("\nERROR: Destino incorrecto. Introduce los datos de nuevo.\n")
-        else:
-            bucle_destino = True
 
-    plazas = int(input("\nIntroduce las plazas: "))
-    bucle_plazas= True
-    while bucle_plazas:
-        try:
-            plazas = int(input("\nIntroduce las plazas: "))
-            bucle_plazas = False
-        except:
-            print("\nERROR: Plazas incorrectas. Introduce un numero.\n")
-    
+    plazas = str(input("\nIntroduce las plazas: "))
+
     l.aniadir_nuevo(fecha, hora, destino, plazas)
+    l.guardar()

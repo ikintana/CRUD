@@ -13,13 +13,21 @@ def aniadir_nuevo(fecha, hora, destino, plazas):
     diccionario = {"id_vuelo": id_vuelo, "fecha_completa":fecha_completa(fecha, hora), "destino": destino, "plazas": plazas}
     lista.append(diccionario)
 
+def aniadir_nuevo_carga(id_vuelo, fecha_completa, destino, plazas):
+    #crear diccionario y añadir con append a lista
+    #input con fecha, hora, destino, plaza
+    #llamar a fecha completa con hora y fecha
+    diccionario = {"id_vuelo": id_vuelo, "fecha_completa":fecha_completa, "destino": destino, "plazas": plazas}
+    lista.append(diccionario)
+    guardar()
+
 def cargar():
     try:
         # Intentar abrir el archivo JSON en modo lectura
         with open(nombre_fichero, "r") as archivo:
             lista_descarga = json.load(archivo)
             for diccionario in lista_descarga:
-                aniadir_nuevo(diccionario["fecha_completa"], diccionario["destino"], diccionario["plazas"])
+                aniadir_nuevo_carga(diccionario["id_vuelo"], diccionario["fecha_completa"], diccionario["destino"], diccionario["plazas"])
     except:
         # Crear un archivo JSON vacío si no existe
         with open(nombre_fichero, "w") as archivo:
