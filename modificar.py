@@ -1,4 +1,5 @@
 import listado as l
+import eliminar
 
 def modificar_vuelos():
     id_vuelo = int(input("\nIntroduce el ID del vuelo: "))
@@ -34,4 +35,4 @@ def modificar_vuelos():
     else:
         print("El vuelo introducido no se ha encontrado.")
     return None  # Devuelve None si no se encuentra ninguna coincidencia
-
+>>>>>>> Stashed changes
