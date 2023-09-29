@@ -5,21 +5,12 @@ import time
 nombre_fichero = "datos.json"
 lista = []
 
-def aniadir_nuevo():
+def aniadir_nuevo(fecha, hora, destino, plazas):
     #crear diccionario y añadir con append a lista
     #input con fecha, hora, destino, plaza
     #llamar a fecha completa con hora y fecha
     id_vuelo = crear_id()
-    destino = str(input("Introduce destino: "))
-    plazas = str(input("Introduce plazas: "))
-    fecha_test = comprobar_fecha(str(input("Introducir fecha: ")))
-    hora_test = comprobar_hora(str("Introducir hora: "))
-    if fecha_test == True and hora_test == True:
-        fecha_completa(fecha_test, hora_test)
-    else:
-        pass
-    pass
-    diccionario = {"id_vuelo": id_vuelo, "fecha_completa":fecha_completa, "destino": destino, "plazas": plazas}
+    diccionario = {"id_vuelo": id_vuelo, "fecha_completa":fecha_completa(fecha, hora), "destino": destino, "plazas": plazas}
     lista.append(diccionario)
 
 def cargar():
@@ -45,8 +36,8 @@ def guardar():
 def crear_id():
     return int(time.time())
 
-def fecha_completa(fecha_test, hora_test):
-    return fecha_test + " " + hora_test
+def fecha_completa(fecha, hora):
+    return fecha + " " + hora
 
 def comprobar_fecha(fecha):
     return True
