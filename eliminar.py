@@ -15,4 +15,14 @@ def eliminar_vuelos():
         contador += 1
     l.guardar()
 
-   
+def eliminar_vuelos_reconocido(id_vuelo):
+    contador = 0
+
+    for vuelos in l.lista:
+        if vuelos["id_vuelo"] == id_vuelo:
+            del l.lista[contador] 
+            l.guardar()
+            print ("\nVuelo eliminado correctamente")
+        else:
+            print("\nVuelo no encontrado.")
+        contador += 1
