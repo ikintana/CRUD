@@ -40,7 +40,18 @@ def fecha_completa(fecha, hora):
     return fecha + " " + hora
 
 def comprobar_fecha(fecha):
-    return True
+    try:
+        # Intenta convertir la cadena de fecha en un objeto datetime
+        datetime.datetime.strptime(fecha, "%d/%m/%Y")
+        return True
+    except ValueError:
+        # Si ocurre un error, la fecha no es válida
+        return False
 
 def comprobar_hora(hora):
-    return True
+    try:
+        time.strptime(hora, "%H:%M")
+        return True
+    except ValueError:
+        return False
+    
