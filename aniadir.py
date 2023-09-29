@@ -26,3 +26,5 @@ def aniadir_vuelos():
 
     l.aniadir_nuevo(fecha, hora, destino, plazas)
     l.guardar()
+
+    print("\nSe ha creado el vuelo correctamente.")
