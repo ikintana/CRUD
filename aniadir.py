@@ -37,4 +37,4 @@ def aniadir_vuelos():
         except:
             print("\nERROR: Plazas incorrectas. Introduce un numero.\n")
     
-    l.guardar(fecha, hora, destino, plazas)
+    l.aniadir_nuevo(fecha, hora, destino, plazas)
