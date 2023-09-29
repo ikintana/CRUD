@@ -13,4 +13,5 @@ def eliminar_vuelos():
         else:
             print("Vuelo no encontrado.")
         contador += 1
+    l.guardar()
 
