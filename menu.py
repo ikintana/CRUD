@@ -11,7 +11,7 @@ def ejecutar():
             print("\n- - - - - - - - - - - - - - - - - - - -")
             mostrar_menu()
             opcion = str(input("\nElija una opción: "))
-           
+            
             match opcion: 
                 case "1":
                     leer.mostrar_vuelos()      
