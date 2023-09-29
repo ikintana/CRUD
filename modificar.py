@@ -35,4 +35,3 @@ def modificar_vuelos():
     else:
         print("El vuelo introducido no se ha encontrado.")
     return None  # Devuelve None si no se encuentra ninguna coincidencia
->>>>>>> Stashed changes
