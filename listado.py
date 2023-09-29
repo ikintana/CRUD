@@ -9,7 +9,7 @@ def aniadir_nuevo():
     #crear diccionario y añadir con append a lista
     #input con fecha, hora, destino, plaza
     #llamar a fecha completa con hora y fecha
-    id_vuelo = int(time.time())
+    id_vuelo = crear_id()
     destino = str(input("Introduce destino: "))
     plazas = str(input("Introduce plazas: "))
     fecha_test = comprobar_fecha(str(input("Introducir fecha: ")))
@@ -43,10 +43,10 @@ def guardar():
             print("No ha sido posible guardar el JSON.")
 
 def crear_id():
-    pass
+    return int(time.time())
 
 def fecha_completa(fecha_test, hora_test):
-    pass
+    return fecha_test + " " + hora_test
 
 def comprobar_fecha(fecha):
     return True
