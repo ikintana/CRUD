@@ -13,13 +13,13 @@ def ejecutar():
            
             match opcion: 
                 case "1":
-                    leer.mostrar_vuelos(archivo_json)      
+                    leer.mostrar_vuelos()      
                 case "2":
-                    aniadir.aniadir_vuelo(archivo_json)
+                    aniadir.aniadir_vuelo()
                 case "3":
-                    modificar.modificar_vuelos(archivo_json)
+                    modificar.modificar_vuelos()
                 case "4":
-                    eliminar.eliminar_vuelos(archivo_json)
+                    eliminar.eliminar_vuelos()
                 case "0":
                     variable = False
                 case other:
@@ -33,6 +33,5 @@ def mostrar_menu():
     print("0. Salir")
 
 if __name__ == "__main__":
-    archivo_json = "vuelos.json"
     ejecutar()
     
