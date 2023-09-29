@@ -23,7 +23,7 @@ def ejecutar():
                     eliminar.eliminar_vuelos()
                 case "0":
                     variable = False
-                case other:
+                case _:
                     print("\nOpción no válida. Intente de nuevo.")
 
 def mostrar_menu():
