@@ -2,9 +2,10 @@ import leer
 import aniadir
 import modificar
 import eliminar
+import listado as l
 
 def ejecutar():
-
+    l.cargar()
     variable = True
     while variable:
             print("\n- - - - - - - - - - - - - - - - - - - -")
@@ -26,7 +27,7 @@ def ejecutar():
                     print("\nOpción no válida. Intente de nuevo.")
 
 def mostrar_menu():
-    print("n\1. Información de los Vuelos")
+    print("\n1. Información de los Vuelos")
     print("2. Añadir un Vuelo")
     print("3. Modificar un Vuelo Existente")
     print("4. Borrar un Vuelo")
