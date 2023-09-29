@@ -2,9 +2,10 @@ import leer
 import aniadir
 import modificar
 import eliminar
+import listado as l
 
 def ejecutar():
-
+    l.cargar()
     variable = True
     while variable:
             print("\n- - - - - - - - - - - - - - - - - - - -")
